@@ -36,11 +36,9 @@ func InsertUser(array map[string]interface{}) error {
 	// fmt.Println(string(jsonString))
 
 	result := db.Model(&User{}).Create(array) // 通过数据的指针来创建
-	fmt.Println(result.Error, result.RowsAffected)
 	if result.Error != nil {
 		fmt.Println("建立失敗")
 	}
 
 	return result.Error
-	// return nil
 }
