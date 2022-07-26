@@ -11,12 +11,13 @@ import (
 func test(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
 		"title":   "Main website",
-		"content": "content is here123",
+		"content": "test123",
 	})
 }
 
 func main() {
 
+	// 不需取值
 	server := gin.Default()
 	server.LoadHTMLGlob("template/*")
 	server.GET("/", test)

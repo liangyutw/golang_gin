@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <!-- 判斷無法正確執行，擇一判斷可行 -->
+        {{ if .Data }}
+
+            {{range $key, $value := .Data}}
+                參數名：{{ $key }}，參數值：{{ $value }} <BR>
+            {{end}}
+
+        {{ end }}
+
+        {{ if .Fibo }}
+
+            {{range $k, $v := .Fibo}}
+                參數名：{{ $k }}，參數值：{{ $v }} <BR>
+            {{end}}
+
+
+        {{ end }}
+    </body>
+</html>
